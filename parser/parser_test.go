@@ -19,6 +19,7 @@ let foobar = 838383;
 	p := New(l)
 
 	program := p.ParseProgram()
+	checkParseErrors(t, p)
 	if program == nil {
 		t.Fatalf("ParseProgram() devolvió nil")
 	}
@@ -40,6 +41,18 @@ let foobar = 838383;
 			return
 		}
 	}
+}
+
+func checkParseErrors(t *testing.T, p *Parser) {
+	errors := p.Errors()
+	if len(errors) == 0 {
+		return
+	}
+	t.Errorf("el Parser tuvo esta cantidad de errores %d", len(errors))
+	for _, msg := range errors {
+		t.Errorf("Error de parseo: %q", msg)
+	}
+	t.FailNow()
 }
 
 func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
