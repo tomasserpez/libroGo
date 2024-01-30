@@ -1,7 +1,7 @@
 // lexer/lexer.go
 package lexer
 
-import "tomprueba/token"
+import "tomlang/token"
 
 type Lexer struct {
 	input        string

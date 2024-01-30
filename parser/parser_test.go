@@ -4,8 +4,8 @@ package parser
 
 import (
 	"testing"
-	"tomprueba/ast"
-	"tomprueba/lexer"
+	"tomlang/ast"
+	"tomlang/lexer"
 )
 
 func TestLetStatements(t *testing.T) {

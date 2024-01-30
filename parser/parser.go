@@ -4,9 +4,9 @@ package parser
 
 import (
 	"fmt"
-	"tomprueba/ast"
-	"tomprueba/lexer"
-	"tomprueba/token"
+	"tomlang/ast"
+	"tomlang/lexer"
+	"tomlang/token"
 )
 
 type Parser struct {

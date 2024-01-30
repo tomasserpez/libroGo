@@ -2,7 +2,7 @@ package ast
 
 import (
 	"bytes"
-	"tomprueba/token"
+	"tomlang/token"
 )
 
 type Node interface {
