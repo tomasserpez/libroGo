@@ -6,8 +6,8 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"tomprueba/lexer"
-	"tomprueba/token"
+	"tomlang/lexer"
+	"tomlang/token"
 )
 
 const PROMPT = "$ "
