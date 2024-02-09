@@ -1,4 +1,3 @@
 module tomlang
 
-
-go 1.22rc2
+go 1.22
