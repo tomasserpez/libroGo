@@ -7,7 +7,6 @@
     <list default="true" id="c132f8cc-5bbb-4590-aa92-0b98883dd67b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ast/ast.go" beforeDir="false" afterPath="$PROJECT_DIR$/ast/ast.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parser/parser.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parser/parser_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser_test.go" afterDir="false" />
     </list>
@@ -46,6 +45,7 @@
   "keyToString": {
     "Go Build.go build main.go.executor": "Run",
     "Go Build.go build tomlang/.executor": "Run",
+    "Go Test.TestIfExpression in tomlang/parser.executor": "Run",
     "Go Test.TestLetStatements in parser_test.go.executor": "Run",
     "Go Test.TestParsingPrefixExpressions in tomlang/parser.executor": "Run",
     "Go Test.parser_test.go.executor": "Run",
@@ -62,10 +62,10 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "go.sdk"
+    "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
-  <component name="RunManager" selected="Go Test.parser_test.go">
+  <component name="RunManager" selected="Go Test.TestIfExpression in tomlang/parser">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="tomlang" />
       <working_directory value="$PROJECT_DIR$" />
@@ -74,11 +74,16 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build tomlang/" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestIfExpression in tomlang/parser" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tomlang" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
+      <working_directory value="$PROJECT_DIR$/parser" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tomlang/parser" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestIfExpression\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestLetStatements in parser_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -114,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestIfExpression in tomlang/parser" />
         <item itemvalue="Go Test.parser_test.go" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Test.TestParsingPrefixExpressions in tomlang/parser" />
         <item itemvalue="Go Test.TestLetStatements in parser_test.go" />
-        <item itemvalue="Go Build.go build tomlang/" />
       </list>
     </recent_temporary>
   </component>
