@@ -41,8 +41,9 @@ func testEval(input string) object.Object {
 	l := lexer.New(input)
 	p := parser.New(l)
 	program := p.ParseProgram()
+	env := object.NewEnvironment()
 
-	return Eval(program)
+	return Eval(program, env)
 }
 func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {
 	result, ok := obj.(*object.Integer)
@@ -104,7 +105,6 @@ func testBooleanObject(t *testing.T, obj object.Object, expected bool) bool {
 
 	return true
 }
-
 func TestBangOperator(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -123,7 +123,6 @@ func TestBangOperator(t *testing.T) {
 		testBooleanObject(t, evaluated, tt.expected)
 	}
 }
-
 func TestIfElseExpression(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -147,7 +146,6 @@ func TestIfElseExpression(t *testing.T) {
 		}
 	}
 }
-
 func testNullObject(t *testing.T, obj object.Object) bool {
 	if obj != NULL {
 		t.Errorf("Null object no es Null. Se obtuvo=%T (%+v)", obj, obj)
@@ -155,4 +153,80 @@ func testNullObject(t *testing.T, obj object.Object) bool {
 	}
 
 	return true
+}
+
+// Return
+func TestReturnStatements(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected int64
+	}{
+		{"return 10;", 10},
+		{"return 10; 9;", 10},
+		{"return 2 * 5; 9;", 10},
+		{"9; return 2 * 5; 9;", 10},
+		{`if (10 > 1) {
+if (10 > 1) {
+return 10;
+}return 1;
+}`, 10},
+	}
+
+	for _, tt := range tests {
+		evaluated := testEval(tt.input)
+		testIntegerObject(t, evaluated, tt.expected)
+	}
+}
+
+// Error handling
+func TestErrorHandling(t *testing.T) {
+	tests := []struct {
+		input           string
+		expectedMessage string
+	}{
+		{"5 + true;", "No coinciden los tipos: INTEGER + BOOLEAN"},
+		{"5 + true; 5;", "No coinciden los tipos: INTEGER + BOOLEAN"},
+		{"-true", "Operador desconocido: -BOOLEAN"},
+		{"true + false;", "Operador desconocido: BOOLEAN + BOOLEAN"},
+		{"5; true + false; 5", "Operador desconocido: BOOLEAN + BOOLEAN"},
+		{"if (10 > 1) { true + false; }", "Operador desconocido: BOOLEAN + BOOLEAN"},
+		{`
+if (10 > 1) {
+if (10 > 1) {
+return true + false;
+}
+return 1;
+}
+`, "Operador desconocido: BOOLEAN + BOOLEAN"},
+		{"foobar", "Identificador no encontrado: foobar"},
+	}
+
+	for _, tt := range tests {
+		evaluated := testEval(tt.input)
+		errObj, ok := evaluated.(*object.Error)
+		if !ok {
+			t.Errorf("No se devolvió un objeto error. Se obtuvo=%T (%+v)", evaluated, evaluated)
+			continue
+		}
+		if errObj.Message != tt.expectedMessage {
+			t.Errorf("Mensaje de error incorrecto. Se esperaba=%q, se obtuvo=%q", tt.expectedMessage, errObj.Message)
+		}
+	}
+}
+
+// Let
+func TestLetStatements(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected int64
+	}{
+		{"let a = 5; a;", 5},
+		{"let a = 5 * 5; a;", 25},
+		{"let a = 5; let b = a; b;", 5},
+		{"let a = 5; let b = a; let c = a + b + 5; c;", 15},
+	}
+
+	for _, tt := range tests {
+		testIntegerObject(t, testEval(tt.input), tt.expected)
+	}
 }
