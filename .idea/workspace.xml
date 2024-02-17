@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c132f8cc-5bbb-4590-aa92-0b98883dd67b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ast/ast.go" beforeDir="false" afterPath="$PROJECT_DIR$/ast/ast.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/parser.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/parser_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repl/repl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repl/repl.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="RunManager" selected="Go Build.go build main.go">
@@ -139,8 +135,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-cf85c2eafa99-d131227c97e2-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-241.11761.29" />
-        <option value="bundled-js-predefined-1d06a55b98c1-e293885f7bc4-JavaScript-GO-241.11761.29" />
+        <option value="bundled-gosdk-2946fb9b3188-d131227c97e2-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-241.12662.60" />
+        <option value="bundled-js-predefined-1d06a55b98c1-e293885f7bc4-JavaScript-GO-241.12662.60" />
       </set>
     </attachedChunks>
   </component>
