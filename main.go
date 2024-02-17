@@ -9,11 +9,11 @@ import (
 )
 
 func main() {
-	user, err := user.Current()
+	usuario, err := user.Current()
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Bienvenido %s! Este es un lenguaje que estoy programando con fines didacticos para aprender el funcionamiento interno de un interprete.", user.Username)
-	fmt.Printf("\nEjecute sus comandos:%s")
+	fmt.Printf("Bienvenido %s! Este es un lenguaje que estoy programando con fines didacticos para aprender el funcionamiento interno de un interprete.", usuario.Username)
+	fmt.Printf("\nEjecute sus comandos:\n")
 	repl.Start(os.Stdin, os.Stdout)
 }
