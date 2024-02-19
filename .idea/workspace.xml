@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c132f8cc-5bbb-4590-aa92-0b98883dd67b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ast/ast.go" beforeDir="false" afterPath="$PROJECT_DIR$/ast/ast.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluator/evaluator.go" beforeDir="false" afterPath="$PROJECT_DIR$/evaluator/evaluator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluator/evaluator_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/evaluator/evaluator_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/lexer.go" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/lexer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/lexer_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/lexer_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/object/object.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/parser.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/parser_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token/token.go" beforeDir="false" afterPath="$PROJECT_DIR$/token/token.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluator/builtins.go" beforeDir="false" afterPath="$PROJECT_DIR$/evaluator/builtins.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
