@@ -199,6 +199,7 @@ return 1;
 }
 `, "Operador desconocido: BOOLEAN + BOOLEAN"},
 		{"foobar", "Identificador no encontrado: foobar"},
+		{`"Hello" - "World"`, "Operador desconocido: STRING - STRING"},
 	}
 
 	for _, tt := range tests {
@@ -256,7 +257,6 @@ func TestFunctionObject(t *testing.T) {
 	}
 
 }
-
 func TestFunctionApplication(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -274,7 +274,6 @@ func TestFunctionApplication(t *testing.T) {
 		testIntegerObject(t, testEval(tt.input), tt.expected)
 	}
 }
-
 func TestClosures(t *testing.T) {
 	input := `
 let newAdder = fn(x) {
@@ -283,4 +282,65 @@ fn(y) { x + y };
 let addTwo = newAdder(2);
 addTwo(2);`
 	testIntegerObject(t, testEval(input), 4)
+}
+
+// String
+func TestStringLiteral(t *testing.T) {
+	input := `"Hello World!"`
+
+	evaluated := testEval(input)
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("Object no es String. Se obtuvo=%T (%+v)", evaluated, evaluated)
+	}
+
+	if str.Value != "Hello World!" {
+		t.Errorf("String con valor erroneo. Se obtuvo=%q", str.Value)
+	}
+}
+
+func TestStringConcatenation(t *testing.T) {
+	input := `"Hello" + " " + "World!"`
+
+	evaluated := testEval(input)
+	str, ok := evaluated.(*object.String)
+	if !ok {
+		t.Fatalf("Object no es String. Se obtuvo=%T (%+v)", evaluated, evaluated)
+	}
+
+	if str.Value != "Hello World!" {
+		t.Errorf("String con valor erroneo. Se obtuvo=%q", str.Value)
+	}
+}
+
+// Builtin
+func TestBuiltinFunctions(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected interface{}
+	}{
+		{`len("")`, 0},
+		{`len("four")`, 4},
+		{`len("hello world")`, 11},
+		{`len(1)`, "Argumento para 'len' no soportado, se obtuvo=INTEGER"},
+		{`len("one", "two")`, "Cantidad erronea de argumentos. Se obtuvo=2, Se esperaba=1"},
+	}
+
+	for _, tt := range tests {
+		evaluated := testEval(tt.input)
+
+		switch expected := tt.expected.(type) {
+		case int:
+			testIntegerObject(t, evaluated, int64(expected))
+		case string:
+			errObj, ok := evaluated.(*object.Error)
+			if !ok {
+				t.Errorf("Object no es Error. Se obtuvo=%T (%+v)", evaluated, evaluated)
+				continue
+			}
+			if errObj.Message != expected {
+				t.Errorf("Mensaje de error equivocado.. Se esperaba=%q, se obtuvo=%q", expected, errObj.Message)
+			}
+		}
+	}
 }
