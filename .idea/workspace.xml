@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c132f8cc-5bbb-4590-aa92-0b98883dd67b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/object/object_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ast/ast.go" beforeDir="false" afterPath="$PROJECT_DIR$/ast/ast.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluator/builtins.go" beforeDir="false" afterPath="$PROJECT_DIR$/evaluator/builtins.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluator/evaluator.go" beforeDir="false" afterPath="$PROJECT_DIR$/evaluator/evaluator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluator/evaluator_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/evaluator/evaluator_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lexer/lexer.go" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/lexer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lexer/lexer_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/lexer_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/object/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/object/object.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/parser.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/parser_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/parser/parser_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token/token.go" beforeDir="false" afterPath="$PROJECT_DIR$/token/token.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,17 +70,21 @@
     "Go Test.TestFunctionLiteralParsing in tomlang/parser.executor": "Run",
     "Go Test.TestFunctionObject in tomlang/evaluator.executor": "Run",
     "Go Test.TestFunctionmParameterParsing in tomlang/parser.executor": "Run",
+    "Go Test.TestHashIndexExpressions in tomlang/evaluator.executor": "Run",
     "Go Test.TestIfExpression in tomlang/parser.executor": "Run",
     "Go Test.TestLetStatement in tomlang/parser.executor": "Run",
     "Go Test.TestLetStatements in parser_test.go.executor": "Run",
     "Go Test.TestLetStatements in tomlang/parser.executor": "Run",
+    "Go Test.TestParingEmptyHashLiteral in tomlang/parser.executor": "Run",
     "Go Test.TestParsingArrayLiterals in tomlang/parser.executor": "Run",
+    "Go Test.TestParsingHashLiteralsWithExpressions in tomlang/parser.executor": "Run",
     "Go Test.TestParsingIndexExpressions in tomlang/parser.executor": "Run",
     "Go Test.TestParsingPrefixExpressions in tomlang/parser.executor": "Run",
     "Go Test.TestStringLiteral in tomlang/evaluator.executor": "Run",
     "Go Test.TestStringLiteralExpression in tomlang/parser.executor": "Run",
     "Go Test.evaluator_test.go.executor": "Run",
     "Go Test.lexer_test.go.executor": "Run",
+    "Go Test.object_test.go.executor": "Run",
     "Go Test.parser_test.go.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
@@ -110,7 +124,7 @@
       <pattern value="^\QTestArrayIndexExpressions\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestArrayLiterals in tomlang/evaluator" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestHashIndexExpressions in tomlang/evaluator" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tomlang" />
       <working_directory value="$PROJECT_DIR$/evaluator" />
       <root_directory value="$PROJECT_DIR$" />
@@ -119,19 +133,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestArrayLiterals\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestErrorHandling in tomlang/evaluator" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="tomlang" />
-      <working_directory value="$PROJECT_DIR$/evaluator" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="tomlang/evaluator" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestErrorHandling\E$" />
+      <pattern value="^\QTestHashIndexExpressions\E$" />
       <method v="2" />
     </configuration>
     <configuration name="evaluator_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -144,13 +146,23 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="parser_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tomlang" />
+      <working_directory value="$PROJECT_DIR$/parser" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/parser/parser_test.go" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Test.TestHashIndexExpressions in tomlang/evaluator" />
         <item itemvalue="Go Test.evaluator_test.go" />
+        <item itemvalue="Go Test.parser_test.go" />
         <item itemvalue="Go Test.TestArrayIndexExpressions in tomlang/evaluator" />
-        <item itemvalue="Go Test.TestArrayLiterals in tomlang/evaluator" />
-        <item itemvalue="Go Test.TestErrorHandling in tomlang/evaluator" />
       </list>
     </recent_temporary>
   </component>

@@ -62,6 +62,7 @@ const (
 
 	// TIPOS DE DATOS
 	STRING = "STRING"
+	COLON  = ":"
 )
 
 type Token struct {
