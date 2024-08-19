@@ -3,13 +3,13 @@
 package compiler
 
 import (
+	"fmt"
+	"testing"
 	"tomlang/ast"
 	"tomlang/code"
 	"tomlang/lexer"
-	"tomlang/parser"
 	"tomlang/object"
-	"testing"
-	"fmt"
+	"tomlang/parser"
 )
 
 func parse(input string) *ast.Program {
@@ -18,18 +18,18 @@ func parse(input string) *ast.Program {
 	return p.ParseProgram()
 }
 
-type compilerTEstCase struct {
-	input					string
-	expectedConstants		[]interface{}
-	expectedInstructions	[]code.Instructions
+type compilerTestCase struct {
+	input                string
+	expectedConstants    []interface{}
+	expectedInstructions []code.Instructions
 }
 
-func TestIntegerArithmetic(t *testing.T){
+func TestIntegerArithmetic(t *testing.T) {
 	tests := []compilerTestCase{
 		{
-			input:					"1 + 2",
-			expectedConstants:		[]interface{}{1, 2},
-			expectedInstructions:	[]code.Instructions{
+			input:             "1 + 2",
+			expectedConstants: []interface{}{1, 2},
+			expectedInstructions: []code.Instructions{
 				code.Make(code.OpConstant, 0),
 				code.Make(code.OpConstant, 1),
 			},
@@ -38,7 +38,7 @@ func TestIntegerArithmetic(t *testing.T){
 	runCompilerTests(t, tests)
 }
 
-func runCompilerTests(t *testing.T, tests []compilerTestCase){
+func runCompilerTests(t *testing.T, tests []compilerTestCase) {
 	t.Helper()
 
 	for _, tt := range tests {
@@ -54,30 +54,30 @@ func runCompilerTests(t *testing.T, tests []compilerTestCase){
 
 		err = testInstructions(tt.expectedInstructions, bytecode.Instructions)
 		if err != nil {
-			t.fatalf("ERROR: error en el testInstructions: %s", err)
+			t.Fatalf("ERROR: error en el testInstructions: %s", err)
 		}
 
 		err = testConstants(t, tt.expectedConstants, bytecode.Constants)
 		if err != nil {
-			t.fatalf("ERROR: error en el testConstants: %s", err)
+			t.Fatalf("ERROR: error en el testConstants: %s", err)
 		}
 	}
 }
 
 func testInstructions(
-	expected	[]code.Instructions,
-	actual 		code.Instructions,
+	expected []code.Instructions,
+	actual code.Instructions,
 ) error {
-	concatted := concatInstruction(expected)
+	concatted := concatInstructions(expected)
 
-	if len(actual) != len(concatted){
+	if len(actual) != len(concatted) {
 		return fmt.Errorf("ERROR: instrucción con largo erroneo. \nSe esperaba=%q\nSe obtuvo=%q",
-			i, concatted, actual)
+			concatted, actual)
 	}
 
 	for i, ins := range concatted {
 		if actual[i] != ins {
-			return fmt.Errorf("ERROR: instruccion erronea en %d. \nSe esperaba=%q\nSe obtuvo=%q",i, concatted, actual)
+			return fmt.Errorf("ERROR: instruccion erronea en %d. \nSe esperaba=%q\nSe obtuvo=%q", i, concatted, actual)
 		}
 	}
 	return nil
@@ -95,9 +95,9 @@ func concatInstructions(s []code.Instructions) code.Instructions {
 func testConstants(
 	t *testing.T,
 	expected []interface{},
-	actual   []object.Object,
+	actual []object.Object,
 ) error {
-	if len(expected) != len(actual){
+	if len(expected) != len(actual) {
 		return fmt.Errorf("ERROR: Numero erroneo de constantes. Se obtuvo=%d, Se esperaba=%d", len(actual), len(expected))
 	}
 
@@ -124,5 +124,3 @@ func testIntegerObject(expected int64, actual object.Object) error {
 
 	return nil
 }
-
-
