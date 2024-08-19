@@ -1,11 +1,10 @@
-// main.go
 package main
 
 import (
 	"fmt"
+	"tomlang/repl"
 	"os"
 	"os/user"
-	"tomlang/repl"
 )
 
 func main() {
@@ -13,7 +12,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Bienvenido %s! Este es un lenguaje que estoy programando con fines didacticos para aprender el funcionamiento interno de un interprete.", user.Username)
-	fmt.Printf("\nEjecute sus comandos:%s")
+	fmt.Printf("Hello %s! This is the tomlang programming language!\n",
+		user.Username)
+	fmt.Printf("Feel free to type in commands\n")
 	repl.Start(os.Stdin, os.Stdout)
 }

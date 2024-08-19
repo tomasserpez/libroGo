@@ -1,9 +1,8 @@
-// ast/ast_test.go
 package ast
 
 import (
+	"tomlang/token"
 	"testing"
-	"tomprueba/token"
 )
 
 func TestString(t *testing.T) {
@@ -12,17 +11,18 @@ func TestString(t *testing.T) {
 			&LetStatement{
 				Token: token.Token{Type: token.LET, Literal: "let"},
 				Name: &Identifier{
-					Token: token.Token{Type: token.IDENT, Literal: "miVariable"},
-					Value: "miVariable",
+					Token: token.Token{Type: token.IDENT, Literal: "myVar"},
+					Value: "myVar",
 				},
 				Value: &Identifier{
-					Token: token.Token{Type: token.IDENT, Literal: "miOtraVariable"},
-					Value: "miOtraVariable",
+					Token: token.Token{Type: token.IDENT, Literal: "anotherVar"},
+					Value: "anotherVar",
 				},
 			},
 		},
 	}
-	if program.String() != "let miVariable = miOtraVariable;" {
-		t.Errorf("program.String() error. Se obtuvo=%q", program.String())
+
+	if program.String() != "let myVar = anotherVar;" {
+		t.Errorf("program.String() wrong. got=%q", program.String())
 	}
 }
