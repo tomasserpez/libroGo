@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d58de0-bec8-4b54-b7bd-473bbe0b9e70" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tomlang.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/code.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/code_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/code_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compiler/compiler.go" beforeDir="false" afterPath="$PROJECT_DIR$/compiler/compiler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compiler/compiler_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/compiler/compiler_test.go" afterDir="false" />
     </list>
@@ -51,32 +46,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Go Test.TestInstructionString in code_test.go (1).executor": "Run",
-    "Go Test.TestInstructionString in code_test.go.executor": "Run",
-    "Go Test.TestInstructionString in tomlang/code (1).executor": "Debug",
-    "Go Test.TestInstructionString in tomlang/code.executor": "Run",
-    "Go Test.TestMake in code_test.go.executor": "Run",
-    "Go Test.TestMake in tomlang/code.executor": "Run",
-    "Go Test.TestReadOperands in tomlang/code.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "WCG1-TSM",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/tomas/go/go1.21.6/src/tomlang",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "go.sdk"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Go Test.TestInstructionString in code_test.go (1).executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestInstructionString in code_test.go.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestInstructionString in tomlang/code (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Go Test.TestInstructionString in tomlang/code.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestMake in code_test.go.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestMake in tomlang/code.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestReadOperands in tomlang/code.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.go test tomlang/code.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.go test tomlang/compiler.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.gobench tomlang/code.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;WCG1-BTTTAH&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tomas/go/go1.21.6/src/tomlang&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.sdk&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tomas\go\go1.21.6\src\tomlang" />
@@ -162,31 +160,5 @@
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/code/code_test.go</url>
-          <line>43</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/code/code_test.go</url>
-          <line>46</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/code/code_test.go</url>
-          <line>37</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/code/code_test.go</url>
-          <line>31</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
