@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d58de0-bec8-4b54-b7bd-473bbe0b9e70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vm/vm_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compiler/compiler.go" beforeDir="false" afterPath="$PROJECT_DIR$/compiler/compiler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compiler/compiler_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/compiler/compiler_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../.." />
   <component name="Git.Settings">
@@ -46,67 +52,69 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Go Test.TestInstructionString in code_test.go (1).executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestInstructionString in code_test.go.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestInstructionString in tomlang/code (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Go Test.TestInstructionString in tomlang/code.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestMake in code_test.go.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestMake in tomlang/code.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.TestReadOperands in tomlang/code.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.go test tomlang/code.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.go test tomlang/compiler.executor&quot;: &quot;Run&quot;,
-    &quot;Go Test.gobench tomlang/code.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;WCG1-BTTTAH&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tomas/go/go1.21.6/src/tomlang&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;go.sdk&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build main.go.executor": "Coverage",
+    "Go Test.TestInstructionString in code_test.go (1).executor": "Run",
+    "Go Test.TestInstructionString in code_test.go.executor": "Run",
+    "Go Test.TestInstructionString in tomlang/code (1).executor": "Debug",
+    "Go Test.TestInstructionString in tomlang/code.executor": "Run",
+    "Go Test.TestMake in code_test.go.executor": "Run",
+    "Go Test.TestMake in tomlang/code.executor": "Run",
+    "Go Test.TestReadOperands in tomlang/code.executor": "Run",
+    "Go Test.go test tomlang.executor": "Run",
+    "Go Test.go test tomlang/code.executor": "Run",
+    "Go Test.go test tomlang/compiler (1).executor": "Run",
+    "Go Test.go test tomlang/compiler.executor": "Run",
+    "Go Test.go test tomlang/evaluator.executor": "Run",
+    "Go Test.gobench tomlang/code.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "WCG1-POTM",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/tomas/go/go1.21.6/src/tomlang",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "go.sdk"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tomas\go\go1.21.6\src\tomlang" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test tomlang/compiler">
-    <configuration name="TestInstructionString in code_test.go (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.go test tomlang">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="tomlang" />
-      <working_directory value="$PROJECT_DIR$/code" />
+      <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
+      <package value="tomlang" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/code/code_test.go" />
-      <framework value="gotest" />
-      <pattern value="^\QTestInstructionString\E$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestReadOperands in tomlang/code" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test tomlang" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tomlang" />
-      <working_directory value="$PROJECT_DIR$/code" />
-      <kind value="PACKAGE" />
-      <package value="tomlang/code" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestReadOperands\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go test tomlang/code" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test tomlang/compiler (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tomlang" />
-      <working_directory value="$PROJECT_DIR$/code" />
+      <working_directory value="$PROJECT_DIR$/compiler" />
       <kind value="PACKAGE" />
-      <package value="tomlang/code" />
+      <package value="tomlang/compiler" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -122,23 +130,23 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="gobench tomlang/code" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test tomlang/evaluator" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tomlang" />
-      <working_directory value="$PROJECT_DIR$/code" />
+      <working_directory value="$PROJECT_DIR$/evaluator" />
       <kind value="PACKAGE" />
-      <package value="tomlang/code" />
+      <package value="tomlang/evaluator" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <framework value="gobench" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test tomlang" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Test.go test tomlang/evaluator" />
+        <item itemvalue="Go Test.go test tomlang/compiler (1)" />
         <item itemvalue="Go Test.go test tomlang/compiler" />
-        <item itemvalue="Go Test.go test tomlang/code" />
-        <item itemvalue="Go Test.gobench tomlang/code" />
-        <item itemvalue="Go Test.TestInstructionString in code_test.go (1)" />
-        <item itemvalue="Go Test.TestReadOperands in tomlang/code" />
       </list>
     </recent_temporary>
   </component>
@@ -160,5 +168,8 @@
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tomlang$go_build_main_go.out" NAME="go build main.go Coverage Results" MODIFIED="1724180648090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
